@@ -41,17 +41,17 @@ android {
       }
     }
 
-    task ndkBuildRelease(type: Exec) {
+ /*   task ndkBuildRelease(type: Exec) {
       commandLine "$System.env.ANDROID_NDK/ndk-build",
         '-C', file('.').absolutePath,
        'NDK_APPLICATION_MK=${PWD}/native/Application.mk',
        'NDK_MODULE_PATH=${PWD}/native:${PWD}/first-party/fbjni/native:${PWD}/third-party',
        'APP_BUILD_SCRIPT=${PWD}/native/jni/Android.mk'
-    }
+    }*/
 
-    tasks.withType(JavaCompile) {
+  /*  tasks.withType(JavaCompile) {
       compileTask -> compileTask.dependsOn ndkBuildRelease
-    }
+    }*/
 
     lintOptions {
       abortOnError false
