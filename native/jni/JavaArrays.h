@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include <conceal/Slice.h>
+#include <Slice.h>
 #include <fb/fbjni.h>
 
 using facebook::jni::local_ref;

@@ -1,11 +1,13 @@
-# Copyright 2004-present Facebook. All Rights Reserved.
+# native/jni/Application.mk
 
-APP_ABI := armeabi armeabi-v7a arm64-v8a x86 x86_64
-NDK_TOOLCHAIN_VERSION := 4.9
-#APP_STL := stlport_shared
+# Use modern shared C++ STL (required since NDK r23+)
+APP_STL := c++_shared
 
-#APP_STL := gnustl_shared
-APP_STL := gnustl_static
+# Enable C++14 (gnu++1y is the old alias)
+APP_CPPFLAGS := -std=gnu++1y
 
-# Enable c++11 extentions in source code
-APP_CPPFLAGS += -std=c++14
+# Minimum supported Android version
+APP_PLATFORM := android-21
+
+# Target ABIs
+APP_ABI := armeabi-v7a arm64-v8a x86 x86_64

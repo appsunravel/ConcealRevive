@@ -3,9 +3,9 @@
 #pragma once
 
 #include <fb/fbjni.h>
-#include <conceal/CryptoConfig.h>
-#include <conceal/Slice.h>
-#include <conceal/Encrypt.h>
+#include <CryptoConfig.h>
+#include <Slice.h>
+#include <Encrypt.h>
 
 using facebook::conceal::CryptoConfig;
 using facebook::conceal::Encrypt;

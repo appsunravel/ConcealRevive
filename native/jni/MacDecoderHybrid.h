@@ -3,9 +3,9 @@
 #pragma once
 
 #include <fb/fbjni.h>
-#include <conceal/MacConfig.h>
-#include <conceal/MacDecoder.h>
-#include <conceal/Slice.h>
+#include <MacConfig.h>
+#include <MacDecoder.h>
+#include <Slice.h>
 
 using facebook::conceal::MacConfig;
 using facebook::conceal::MacDecoder;

@@ -1,0 +1,18 @@
+pluginManagement {
+    repositories {
+        google()            // Required for Android Gradle Plugin
+        mavenCentral()      // For your other deps
+        gradlePluginPortal()// For community plugins
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "conceal"
+include(":conceal")

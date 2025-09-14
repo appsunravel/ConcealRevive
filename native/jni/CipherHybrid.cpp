@@ -1,7 +1,7 @@
 // Copyright 2004-present Facebook. All Rights Reserved.
 
 #include "CipherHybrid.h"
-#include <conceal/Slice.h>
+#include <Slice.h>
 
 using facebook::jni::alias_ref;
 using facebook::jni::local_ref;

@@ -3,9 +3,9 @@
 #pragma once
 
 #include <fb/fbjni.h>
-#include <conceal/MacConfig.h>
-#include <conceal/MacEncoder.h>
-#include <conceal/Slice.h>
+#include <MacConfig.h>
+#include <MacEncoder.h>
+#include <Slice.h>
 
 namespace facebook { namespace conceal { namespace jni {
 

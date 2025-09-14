@@ -3,7 +3,7 @@
 #pragma once
 
 #include <fb/fbjni.h>
-#include <conceal/Cipher.h>
+#include <Cipher.h>
 #include "DecryptHybrid.h"
 #include "EncryptHybrid.h"
 #include "JKeyChain.h"

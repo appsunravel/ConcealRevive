@@ -1,6 +1,6 @@
 // Copyright 2004-present Facebook. All Rights Reserved.
 
-#include <conceal/Buffer.h>
+#include <Buffer.h>
 #include <gtest/gtest.h>
 #include "SliceTestHelpers.h"
 

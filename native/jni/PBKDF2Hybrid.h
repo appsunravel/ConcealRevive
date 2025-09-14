@@ -3,7 +3,7 @@
 #pragma once
 
 #include <fb/fbjni.h>
-#include <conceal/PBKDF2.h>
+#include <PBKDF2.h>
 
 namespace facebook { namespace conceal { namespace jni {
 

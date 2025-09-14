@@ -3,10 +3,10 @@
 #pragma once
 
 #include <fb/fbjni.h>
-#include <conceal/Buffer.h>
-#include <conceal/CryptoConfig.h>
-#include <conceal/KeyChain.h>
-#include <conceal/Slice.h>
+#include <Buffer.h>
+#include <CryptoConfig.h>
+#include <KeyChain.h>
+#include <Slice.h>
 #include "JKeyChain.h"
 
 namespace facebook { namespace conceal { namespace jni {
