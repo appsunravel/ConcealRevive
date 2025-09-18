@@ -30,7 +30,7 @@ android {
         }
     }
 
-    ndkVersion "25.2.9519653" // lock to NDK r25c
+    ndkVersion "28.2.13676358" // lock to NDK r25c
 
     sourceSets {
         main {

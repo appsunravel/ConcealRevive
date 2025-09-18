@@ -160,21 +160,25 @@ inline local_ref<JClass> JClass::getSuperclass() const noexcept {
   return adopt_local(internal::getEnv()->GetSuperclass(self()));
 }
 
-inline void JClass::registerNatives(std::initializer_list<NativeMethod> methods) {
-  const auto env = internal::getEnv();
+        inline void JClass::registerNatives(std::initializer_list<NativeMethod> methods) {
+            const auto env = internal::getEnv();
 
-  JNINativeMethod jnimethods[methods.size()];
-  size_t i = 0;
-  for (auto it = methods.begin(); it < methods.end(); ++it, ++i) {
-    jnimethods[i].name = it->name;
-    jnimethods[i].signature = it->descriptor.c_str();
-    jnimethods[i].fnPtr = reinterpret_cast<void*>(it->wrapper);
-  }
+            std::vector<JNINativeMethod> jnimethods;
+            jnimethods.reserve(methods.size());
 
-  auto result = env->RegisterNatives(self(), jnimethods, methods.size());
-  FACEBOOK_JNI_THROW_EXCEPTION_IF(result != JNI_OK);
-}
+            for (const auto &it: methods) {
+                JNINativeMethod m;
+                m.name = it.name;
+                m.signature = it.descriptor.c_str();
+                m.fnPtr = reinterpret_cast<void *>(it.wrapper);
+                jnimethods.push_back(m);
+            }
 
+            auto result = env->RegisterNatives(self(),
+                                               jnimethods.data(),
+                                               static_cast<jint>(jnimethods.size()));
+            FACEBOOK_JNI_THROW_EXCEPTION_IF(result != JNI_OK);
+        }
 inline bool JClass::isAssignableFrom(alias_ref<JClass> other) const noexcept {
   const auto env = internal::getEnv();
   // Ths method has behavior compatible with the
