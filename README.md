@@ -9,6 +9,7 @@ A **revived and upgraded** version of Facebook's [Conceal](https://github.com/fa
 
 ---
 
+
 ## 🎯 Purpose
 
 Many apps still depend on Conceal for file and cache encryption but face compatibility issues with:  
@@ -20,6 +21,7 @@ Many apps still depend on Conceal for file and cache encryption but face compati
 
 ---
 
+
 ## ✨ Features
 
 - ✅ **Complies with Google Play's 16 KB DEX requirement**  
@@ -29,6 +31,7 @@ Many apps still depend on Conceal for file and cache encryption but face compati
 - ✅ Perfect for encrypting/decrypting files, caches, and data at rest  
 
 ---
+
 
 ## 📦 Installation (via JitPack)
 
@@ -42,35 +45,47 @@ dependencyResolutionManagement {
         maven { url 'https://jitpack.io' }
     }
 }
+```
 
 2. Add the dependency to your app/build.gradle:
+```gradle
 dependencies {
-    implementation 'com.github.appsunravel:ConcealRevive:1.0.0'
+    implementation 'com.github.appsunravel:ConcealRevive:3.0.0'
 }
+```
 
-🔄 Migration Guide
+
+## 🔄 Migration Guide
 
 If you were already using Facebook Conceal, switching is drop-in:
-
 // Old
+```gradle
 implementation 'com.facebook.conceal:conceal:X.Y.Z'
+```
 
 // New
-implementation 'com.github.appsunravel:ConcealRevive:1.0.0'
-
+```gradle
+implementation 'com.github.appsunravel:ConcealRevive:3.0.0'
+```
 
 No code changes needed – just update the dependency and rebuild.
 
-🔄 Migration Guide
 
-If you were already using Facebook Conceal, switching is drop-in:
+## 📜 License
 
-// Old
-implementation 'com.facebook.conceal:conceal:X.Y.Z'
+ConcealRevive is licensed under the BSD 3-Clause License.
+This project retains Facebook’s original LICENSE
+.
 
-// New
-implementation 'com.github.appsunravel:ConcealRevive:1.0.0'
+Disclaimer:
+This project is not officially affiliated with or endorsed by Facebook/Meta.
+ConcealRevive is a community-maintained fork designed to keep the library compatible with modern Android builds and Google Play’s 16 KB requirement.
 
 
-No code changes needed – just update the dependency and rebuild.
+## 🙌 Credits
 
+Original library by [Facebook Conceal](https://github.com/facebookarchive/conceal)
+
+Revived and maintained by [Muhammad Ahmed](https://pk.linkedin.com/in/ahmed-muhammad-islamabad)
+
+[🔗 Connect with Me](https://wa.me/+923155155564)
